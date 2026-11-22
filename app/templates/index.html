@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskFlow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 70px auto;
+            background: #f5f7fb;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        input { padding: 10px; width: 65%; }
+        button { padding: 10px; background: #2563eb;
+                 color: white; border: none; }
+        li { padding: 8px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>TaskFlow</h1>
+        <p>My Jenkins and Argo CD Project</p>
+
+        <form method="POST">
+            <input name="task" placeholder="Enter a task">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+        </ul>
+
+        <p>Application Version: {{ version }}</p>
+    </div>
+</body>
+</html>

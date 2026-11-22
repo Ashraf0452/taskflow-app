@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        GHCR_OWNER = 'yourgithubusername'
+        GHCR_OWNER = 'ashraf0452'
     }
 
     stages {
